@@ -21,6 +21,7 @@ export const styles = () => {
 // Server
 
 const server = (done) => {
+  browser: "google chrome"
   browser.init({
     server: {
       baseDir: 'source'
