@@ -1,14 +1,37 @@
 .features {
   margin: 0;
   margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 1220px;
+  }
+}
+
+.features__wrapper {
+  margin: 0 20px;
 }
 
 .features__title {
+  margin: 20px 20px 40px;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin: 45px 20px 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 71px 20px 32px;
+  }
 }
 
 .features__text {
@@ -19,7 +42,28 @@
   line-height: 18px;
 }
 
+.features__number {
+  display: none;
+}
+
 .features__list {
-  margin-top: 40px;
-  display: grid;
+  margin: 40px 0 49px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    margin: 72px 30px 32px;
+
+    display: grid;
+    grid-template-columns: 247px 280px;
+    column-gap: 136px;
+    row-gap: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 32px 0 27px;
+
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+  }
 }

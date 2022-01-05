@@ -1,12 +1,35 @@
 .programs {
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
+  width: auto;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 82px;
+  }
+}
+
+.programs__wrapper {
+  margin: 0 20px;
 }
 
 .programs__list {
+  margin: 0 20px;
+  padding: 0;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .programs__item {
