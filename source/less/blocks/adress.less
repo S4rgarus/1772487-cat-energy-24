@@ -1,5 +1,22 @@
 .adress {
-  background-color: #ffffff;
+  background-color: @base-color;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 1220px;
+  }
+}
+
+.adress__cooperation {
+  margin: 26px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2px;
 }
 
 .adress__text {

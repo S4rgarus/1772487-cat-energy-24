@@ -43,9 +43,11 @@
   }
 }
 
-.social__item:not(:last-child) {
-  margin-right: 32px;
-  margin-bottom: 23px;
+.social__item {
+  &:not(:last-child) {
+    margin-right: 32px;
+    margin-bottom: 23px;
+  }
 
   @media (min-width: @tablet-width) {
     background-color: @bg-grey-light;
