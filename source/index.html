@@ -10,10 +10,12 @@
 
 <body>
   <header class="header">
-  <a class="logo header__logo">
-    <img class="header__img header__img--icon" src="img/logo-icon.svg" width="33" height="38" alt="иконка логотипа Кэт Энерджи.">
-    <img class="header__img header__img--name" src="img/logo_header.svg" width="101" height="18" alt="логотип Кэт Энерджи.">
-  </a>
+    <a class="logo header__logo">
+      <img class="header__img header__img--icon" src="img/logo-icon.svg" width="33" height="38"
+        alt="иконка логотипа Кэт Энерджи.">
+      <img class="header__img header__img--name" src="img/logo_header.svg" width="101" height="18"
+        alt="логотип Кэт Энерджи.">
+    </a>
     <nav class="navigation navigation--opened navigation--nojs">
       <button class="navigation__button" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -38,7 +40,7 @@
 
     navMain.classList.remove('navigation--nojs');
 
-    navToggle.addEventListener('click', function() {
+    navToggle.addEventListener('click', function () {
       if (navMain.classList.contains('navigation--closed')) {
         navMain.classList.remove('navigation--closed');
         navMain.classList.add('navigation--opened');
@@ -118,27 +120,27 @@
             обычный корм на Cat Energy Slim. Отличный результат
             без изнуряющих тренировок! При этом он не менял своих
             привычек и по-прежнему спит по 16 часов в день. </p>
-            <div class="example__stats">
-              <ul class="example__list list">
-                <li class="example__item">
-                  <p class="example__number">5 кг</p>
-                  <p class="example__text text--small">снижение веса</p>
-                </li>
-                <li class="example__item">
-                  <p class="example__number">60 дней</p>
-                  <p class="example__text text--small">затрачено времени</p>
-                </li>
-              </ul>
-              <p class="example__results title--subtitle">Затраты на питание: 15000 руб.</p>
-            </div>
+          <div class="example__stats">
+            <ul class="example__list list">
+              <li class="example__item">
+                <p class="example__number">5 кг</p>
+                <p class="example__text text--small">снижение веса</p>
+              </li>
+              <li class="example__item">
+                <p class="example__number">60 дней</p>
+                <p class="example__text text--small">затрачено времени</p>
+              </li>
+            </ul>
+            <p class="example__results title--subtitle">Затраты на питание: 15000 руб.</p>
+          </div>
         </div>
 
         <div class="example__slider">
           <img class="example__img" src="img/before.png" width="280" height="232" alt="Кот до нашего питания.">
           <div class="example__togle">
             <span class="example__range-title title--subtitle">Было</span>
-              <input type="range" name="results" min="0" max="50">
-              <label class="visually-hidden" for="results">результат</label>
+            <input type="range" name="results" min="0" max="50">
+            <label class="visually-hidden" for="results">результат</label>
             <span class="example__range-title title--subtitle">Стало</span>
           </div>
         </div>
@@ -149,21 +151,17 @@
       <h2 class="visually-hidden">Наш адрес</h2>
       <div class="adress__wrapper wrapper">
         <div class="adress__cooperation">
-        <p class="adress__title title--subtitle">Приглашаем <br>
-          к сотрудничеству
-          дилеров!</p>
-        <p class="adress__text"> ул. Большая
-          Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <p class="adress__title title--subtitle">Приглашаем <br>
+            к сотрудничеству
+            дилеров!</p>
+          <p class="adress__text"> ул. Большая
+            Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
-      <iframe class="adress__map"
-       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
-        width="auto"
-        height="100%"
-        allowfullscreen
-        title="Наш магазин находится по адресу ул. Большая
-        Конюшенная, д. 19/8 Санкт-Петербург."
-      ></iframe>
-    </div>
+        <iframe class="adress__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+          width="auto" height="100%" allowfullscreen title="Наш магазин находится по адресу ул. Большая
+        Конюшенная, д. 19/8 Санкт-Петербург."></iframe>
+      </div>
     </section>
   </main>
 
@@ -175,20 +173,32 @@
       <div class="social__wrapper wrapper">
         <ul class="social__list list">
           <li class="social__item">
-            <a class="social__link" href="#"><svg width="23" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 2c0-.6.5-1 1.3-1h3.3c.2 0 .4.1.4.3.4.9.7 1.7 1.2 2.3A28.6 28.6 0 0 0 8 6.1l.2-.1v-.2l.1-3.2c0-.2 0-.4-.2-.4a2 2 0 0 0-.7-.2c-.2 0-.4-.2-.4-.4v-.1C7.6.7 8.4.3 9.9.3H11c.6 0 1 .1 1.4.3.4.3.5.6.5 1.1V6h.3c.2 0 .4 0 .6-.2a12.7 12.7 0 0 0 2.6-4l.5-.4.7-.3h3.8c.3 0 .5.1.6.4l.2.2a1.6 1.6 0 0 1 0 .4v.1c0 .5-.3 1-.8 1.6L20 5.6c-.7.6-1 1-1.2 1.3-.2.1-.2.3-.2.4l.1.3 3.2 3.4.3.6c0 .3-.1.5-.4.7-.3.2-.6.3-1 .3H17c-.3 0-.6 0-1-.3a182 182 0 0 1-2.3-2.4 25.7 25.7 0 0 0-.4 1.6v.4c-.2.4-.5.6-1 .7H9.7a6 6 0 0 1-3.6-1.4C5 10.3 3.8 9.2 3 7.7A32.9 32.9 0 0 1 0 2Zm13.2 4.7c-.3 0-.6 0-.8-.2-.3-.1-.4-.3-.4-.6V1.7c0-.2 0-.4-.2-.5l-.8-.1H9.8a3 3 0 0 0-1.4.3c.6.2 1 .6 1 1.2v3.2c-.1.3-.2.6-.5.8l-.9.3c-.4 0-.8-.2-1-.5C6 4.9 5 3.6 4.5 2.3l-.2-.5H1v.5l.5 1c1.2 2.7 2.6 4.8 4 6.3s2.9 2.3 4.2 2.3H12l.2-.1.1-.2v-.2l.5-1.6.3-.5.6-.2c.3 0 .7.2 1 .6l2 2s.1.2.3.2h3.6c.4 0 .6-.1.6-.3v-.2l-3.2-3.3c-.2-.3-.4-.5-.4-.8 0-.3.2-.6.4-.9l1-1.2c.6-.5 1.1-1 1.5-1.6l.8-1.3.1-.3v-.2h-3.5c-.2 0-.4.2-.5.3l-.1.4c-.4.8-1.4 2.1-2.9 3.9-.3.2-.7.3-1 .3Z" fill="#666"/></svg></a>
+            <a class="social__link" href="#"><svg width="23" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 2c0-.6.5-1 1.3-1h3.3c.2 0 .4.1.4.3.4.9.7 1.7 1.2 2.3A28.6 28.6 0 0 0 8 6.1l.2-.1v-.2l.1-3.2c0-.2 0-.4-.2-.4a2 2 0 0 0-.7-.2c-.2 0-.4-.2-.4-.4v-.1C7.6.7 8.4.3 9.9.3H11c.6 0 1 .1 1.4.3.4.3.5.6.5 1.1V6h.3c.2 0 .4 0 .6-.2a12.7 12.7 0 0 0 2.6-4l.5-.4.7-.3h3.8c.3 0 .5.1.6.4l.2.2a1.6 1.6 0 0 1 0 .4v.1c0 .5-.3 1-.8 1.6L20 5.6c-.7.6-1 1-1.2 1.3-.2.1-.2.3-.2.4l.1.3 3.2 3.4.3.6c0 .3-.1.5-.4.7-.3.2-.6.3-1 .3H17c-.3 0-.6 0-1-.3a182 182 0 0 1-2.3-2.4 25.7 25.7 0 0 0-.4 1.6v.4c-.2.4-.5.6-1 .7H9.7a6 6 0 0 1-3.6-1.4C5 10.3 3.8 9.2 3 7.7A32.9 32.9 0 0 1 0 2Zm13.2 4.7c-.3 0-.6 0-.8-.2-.3-.1-.4-.3-.4-.6V1.7c0-.2 0-.4-.2-.5l-.8-.1H9.8a3 3 0 0 0-1.4.3c.6.2 1 .6 1 1.2v3.2c-.1.3-.2.6-.5.8l-.9.3c-.4 0-.8-.2-1-.5C6 4.9 5 3.6 4.5 2.3l-.2-.5H1v.5l.5 1c1.2 2.7 2.6 4.8 4 6.3s2.9 2.3 4.2 2.3H12l.2-.1.1-.2v-.2l.5-1.6.3-.5.6-.2c.3 0 .7.2 1 .6l2 2s.1.2.3.2h3.6c.4 0 .6-.1.6-.3v-.2l-3.2-3.3c-.2-.3-.4-.5-.4-.8 0-.3.2-.6.4-.9l1-1.2c.6-.5 1.1-1 1.5-1.6l.8-1.3.1-.3v-.2h-3.5c-.2 0-.4.2-.5.3l-.1.4c-.4.8-1.4 2.1-2.9 3.9-.3.2-.7.3-1 .3Z"
+                  fill="#666" />
+              </svg></a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#"><svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m8 0 3.3.1a6 6 0 0 1 1.9.4 4 4 0 0 1 2.3 2.3l.4 2a91.9 91.9 0 0 1 0 6.5 6 6 0 0 1-.4 1.9 4 4 0 0 1-2.3 2.3 6 6 0 0 1-2 .4 91.9 91.9 0 0 1-6.5 0 6 6 0 0 1-1.9-.4 4 4 0 0 1-2.3-2.3 6 6 0 0 1-.4-2 91.7 91.7 0 0 1 0-6.5c0-.7.2-1.3.4-1.9A4 4 0 0 1 2.8.5a6 6 0 0 1 2-.4H8Zm0 1a98.8 98.8 0 0 0-5 .4c-.7.4-1.3.9-1.6 1.6a98.8 98.8 0 0 0 0 10c.3.7.9 1.2 1.6 1.5a98.7 98.7 0 0 0 10 0c.7-.3 1.2-.8 1.5-1.6a98.7 98.7 0 0 0 0-10c-.3-.6-.8-1.2-1.6-1.5a98.8 98.8 0 0 0-5-.3Zm0 10.2a3 3 0 0 0 2.2-1 3 3 0 0 0 1-2.2 3 3 0 0 0-1-2.3A3 3 0 0 0 8 4.8a3 3 0 0 0-2.3 1A3 3 0 0 0 4.8 8a3 3 0 0 0 1 2.2 3 3 0 0 0 2.2 1Zm0-7.3a4 4 0 0 1 2.9 1.2A4 4 0 0 1 12 8a4 4 0 0 1-1.1 2.9 4 4 0 0 1-3 1.1A4 4 0 0 1 5.2 11a4 4 0 0 1-1.2-3c0-1 .4-2 1.2-2.8A4 4 0 0 1 8 4Zm5.2-.1-.3.6a1 1 0 0 1-.7.3c-.3 0-.5 0-.7-.3a.9.9 0 0 1-.2-.6 1 1 0 0 1 .9-1c.3 0 .5 0 .7.3.2.2.3.4.3.7Z" fill="#666"/></svg></a>
+            <a class="social__link" href="#"><svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m8 0 3.3.1a6 6 0 0 1 1.9.4 4 4 0 0 1 2.3 2.3l.4 2a91.9 91.9 0 0 1 0 6.5 6 6 0 0 1-.4 1.9 4 4 0 0 1-2.3 2.3 6 6 0 0 1-2 .4 91.9 91.9 0 0 1-6.5 0 6 6 0 0 1-1.9-.4 4 4 0 0 1-2.3-2.3 6 6 0 0 1-.4-2 91.7 91.7 0 0 1 0-6.5c0-.7.2-1.3.4-1.9A4 4 0 0 1 2.8.5a6 6 0 0 1 2-.4H8Zm0 1a98.8 98.8 0 0 0-5 .4c-.7.4-1.3.9-1.6 1.6a98.8 98.8 0 0 0 0 10c.3.7.9 1.2 1.6 1.5a98.7 98.7 0 0 0 10 0c.7-.3 1.2-.8 1.5-1.6a98.7 98.7 0 0 0 0-10c-.3-.6-.8-1.2-1.6-1.5a98.8 98.8 0 0 0-5-.3Zm0 10.2a3 3 0 0 0 2.2-1 3 3 0 0 0 1-2.2 3 3 0 0 0-1-2.3A3 3 0 0 0 8 4.8a3 3 0 0 0-2.3 1A3 3 0 0 0 4.8 8a3 3 0 0 0 1 2.2 3 3 0 0 0 2.2 1Zm0-7.3a4 4 0 0 1 2.9 1.2A4 4 0 0 1 12 8a4 4 0 0 1-1.1 2.9 4 4 0 0 1-3 1.1A4 4 0 0 1 5.2 11a4 4 0 0 1-1.2-3c0-1 .4-2 1.2-2.8A4 4 0 0 1 8 4Zm5.2-.1-.3.6a1 1 0 0 1-.7.3c-.3 0-.5 0-.7-.3a.9.9 0 0 1-.2-.6 1 1 0 0 1 .9-1c.3 0 .5 0 .7.3.2.2.3.4.3.7Z"
+                  fill="#666" />
+              </svg></a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#"><svg width="13" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5.8H8.8c-1.3 0-2.4.5-3.3 1.3-.9.9-1.3 2-1.3 3.2V8H1.4v3.6h2.8v7.2h3.6v-7.2h2.8l.9-3.6H7.8V5.3l.3-.6c.2-.2.4-.3.7-.3h2.7V.8Z" stroke="#666" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="social__link" href="#"><svg width="13" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.5.8H8.8c-1.3 0-2.4.5-3.3 1.3-.9.9-1.3 2-1.3 3.2V8H1.4v3.6h2.8v7.2h3.6v-7.2h2.8l.9-3.6H7.8V5.3l.3-.6c.2-.2.4-.3.7-.3h2.7V.8Z"
+                  stroke="#666" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></a>
           </li>
         </ul>
       </div>
-        <div class="academy__logo">
-          <a class="logo" href="https://htmlacademy.ru/"><img src="img/HTML Academy.svg" alt="Логотип HTMLACADEMY."></a>
-          <a class="logo" href="https://htmlacademy.ru/"><img src="img/Лого_html.svg" alt="Иконка HTMLACADEMY."></a>
-        </div>
+      <div class="academy__logo">
+        <a class="logo" href="https://htmlacademy.ru/"><img src="img/HTML Academy.svg" alt="Логотип HTMLACADEMY."></a>
+        <a class="logo" href="https://htmlacademy.ru/"><img src="img/Лого_html.svg" alt="Иконка HTMLACADEMY."></a>
+      </div>
     </div>
   </footer>
 </body>
