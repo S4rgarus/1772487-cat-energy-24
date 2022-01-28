@@ -6,14 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat Energy</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body>
   <header class="header">
     <a class="logo header__logo">
-      <img class="header__img header__img--icon" src="img/logo-icon.svg" width="33" height="38"
-        alt="иконка логотипа Кэт Энерджи.">
-      <img class="header__img header__img--name" src="img/logo_header.svg" width="101" height="18"
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+        <img class="header__img header__img--icon" src="img/logo/logo-mobile.svg" width="33" height="38"
+          alt="иконка логотипа Кэт Энерджи.">
+      </picture>
+      <img class="header__img header__img--name" src="img/logo/logo-text.svg" width="101" height="18"
         alt="логотип Кэт Энерджи.">
     </a>
     <nav class="navigation navigation--opened navigation--nojs">
@@ -22,10 +30,10 @@
       </button>
       <ul class="navigation__list list">
         <li class="navigation__item">
-          <a class="navigation__link title title--nav" href="index.html">Главная</a>
+          <a class="navigation__link  title title--nav" href="index.html">Главная</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link title title--nav" href="catalog.html">Каталог продукции</a>
+          <a class="navigation__link   title title--nav" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="navigation__item">
           <a class="navigation__link navigation__link--active title title--nav" href="form.html">Подбор программы</a>
@@ -34,132 +42,118 @@
     </nav>
   </header>
 
-  <script>
-    var navMain = document.querySelector('.navigation');
-    var navToggle = document.querySelector('.navigation__button');
-
-    navMain.classList.remove('navigation--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('navigation--closed')) {
-        navMain.classList.remove('navigation--closed');
-        navMain.classList.add('navigation--opened');
-      } else {
-        navMain.classList.add('navigation--closed');
-        navMain.classList.remove('navigation--opened');
-      }
-    });
-  </script>
-
   <main>
     <h1 class="visually-hidden">Форма подбора программы</h1>
     <section class="form">
       <h2 class="form__title title"> Подбор программы</h2>
       <p class="form__text">Заполните анкету, и мы подберем
         программу питания для вашего кота</p>
-        <form class="form__action" action="https://echo.htmlacademy.ru/" method="post">
+      <form class="form__action" action="https://echo.htmlacademy.ru/" method="post">
 
-          <fieldset class="form__field form__field--info">
-            <ul class="form__list list">
-              <li class="form__item">
+        <fieldset class="form__field form__field--info">
+          <ul class="form__list list">
+            <li class="form__item">
               <label class="form__label" for="cat-name">Имя:*</label>
-              <input class="form__input" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required >
+              <input class="form__input" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
             </li>
             <li class="form__item">
               <label class="form__label" for="cat-weight">Вес (кг):*</label>
               <input class="form__input" type="number" id="cat-weight" name="cat-weight" placeholder="7" required>
-          </li>
+            </li>
             <li class="form__item">
               <label class="form__label" for="cat-age">Возраст (лет):</label>
               <input class="form__input" type="number" id="cat-age" name="cat-age" placeholder="7">
-          </li>
+            </li>
           </ul>
-          </fieldset>
+        </fieldset>
 
-          <fieldset class="form__field form__field--program">
-            <ul class="form__program list">
-              <li class="form__program-item">
-                <label class="control">
-                <input  class="visually-hidden control__input" type="radio" name="program" value="slimming" checked>
+        <fieldset class="form__field form__field--program">
+          <ul class="form__program list">
+            <li class="form__program-item">
+              <label class="control">
+                <input class="visually-hidden control__input" type="radio" name="program" value="slimming" checked>
                 <span class="control__mark"></span>
                 <span class="control__label">Похудение</span>
               </label>
-              </li>
-              <li class="form__program-item">
-                <label class="control">
-                <input  class=" visually-hidden control__input" type="radio" name="program" value="weight-gain">
+            </li>
+            <li class="form__program-item">
+              <label class="control">
+                <input class=" visually-hidden control__input" type="radio" name="program" value="weight-gain">
                 <span class="control__mark"></span>
                 <span class="control__label">Набор массы</span>
-                </label>
-              </li>
-              <li class="form__program-item">
-                <label class="control">
-                <input  class="visually-hidden control__input" type="radio" name="program" value="advice">
+              </label>
+            </li>
+            <li class="form__program-item">
+              <label class="control">
+                <input class="visually-hidden control__input" type="radio" name="program" value="advice">
                 <span class="control__mark"></span>
                 <span class="control__label">Не знаю (Нужен ваш совет)</span>
-                </label>
-              </li>
-          </ul>
-          </fieldset>
-
-          <fieldset class="form__field form__field--contacts">
-            <legend class="form__legend form__legend--contacts">Контактные данные (владельца кота)</h2>
-            <ul class="form__list list form__list--contacts">
-              <li class="form__item">
-            <label class="form__label" for="email">E-mail:*</label>
-              <input class="form__input form__input--contacts" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-              </li>
-              <li class="form__item">
-            <label class="form__label" for="phone">Телефон:* </label>
-              <input class="form__input form__input--contacts" type="tel"  id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+              </label>
             </li>
           </ul>
-          </fieldset>
+        </fieldset>
 
-          <fieldset class="form__field form__field--comment">
-          <legend class="form__legend form__legend--comment">Комментарий</legend>
-          <textarea class="form__comment" name="comment" id="comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </fieldset>
-
-
-          <fieldset class="form__field form__field--additional">
-            <h2 class="form__legend form__legend--additional">Дополнительно</h2>
-            <ul class="form__additional list">
-                <li class="form__additional-item">
-                    <label class="control">
-                    <input class="visually-hidden control__input" type="checkbox" name="sweetener" checked>
-                    <span class="control__mark"></span>
-                    <span class="control__label control__label--additional">Сахарозаменитель</span>
-                  </label>
-                </li>
-                <li class="form__additional-item">
-                  <label class="control">
-                    <input class="visually-hidden control__input" type="checkbox" name="water">
-                    <span class="control__mark"></span>
-                    <span class="control__label control__label--additional">Питьевая вода</span>
-                  </label>
-                </li>
-                <li class="form__additional-item">
-                  <label class="control">
-                    <input class="visually-hidden control__input" type="checkbox" name="milk">
-                    <span class="control__mark"></span>
-                    <span class="control__label control__label--additional">Молоко</span>
-                  </label>
-                </li>
-                <li class="form__additional-item">
-                  <label class="control">
-                  <input class="visually-hidden control__input" type="checkbox" name="vitamins">
-                  <span class="control__mark"></span>
-                  <span class="control__label control__label--additional">Витамины</span>
-                </label>
+        <fieldset class="form__field form__field--contacts">
+          <legend class="form__legend form__legend--contacts">Контактные данные (владельца кота)</h2>
+            <ul class="form__list list form__list--contacts">
+              <li class="form__item">
+                <label class="form__label" for="email">E-mail:*</label>
+                <input class="form__input form__input--contacts" type="email" id="email" name="email"
+                  placeholder="kuklachev@gmail.com" required>
+              </li>
+              <li class="form__item">
+                <label class="form__label" for="phone">Телефон:* </label>
+                <input class="form__input form__input--contacts" type="tel" id="phone" name="phone"
+                  placeholder="8 (960) 900-60-90" required>
               </li>
             </ul>
-          </fieldset>
-          <div class="form__submit">
-            <button class="form__button button" type="submit">Отправить заявку</button>
-            <p class="form__note">* — Обязательные поля</p>
-          </div>
-        </form>
+        </fieldset>
+
+        <fieldset class="form__field form__field--comment">
+          <legend class="form__legend form__legend--comment">Комментарий</legend>
+          <textarea class="form__comment" name="comment" id="comment" rows="5"
+            placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+
+
+        <fieldset class="form__field form__field--additional">
+          <h2 class="form__legend form__legend--additional">Дополнительно</h2>
+          <ul class="form__additional list">
+            <li class="form__additional-item">
+              <label class="control">
+                <input class="visually-hidden control__input" type="checkbox" name="sweetener" checked>
+                <span class="control__mark"></span>
+                <span class="control__label control__label--additional">Сахарозаменитель</span>
+              </label>
+            </li>
+            <li class="form__additional-item">
+              <label class="control">
+                <input class="visually-hidden control__input" type="checkbox" name="water">
+                <span class="control__mark"></span>
+                <span class="control__label control__label--additional">Питьевая вода</span>
+              </label>
+            </li>
+            <li class="form__additional-item">
+              <label class="control">
+                <input class="visually-hidden control__input" type="checkbox" name="milk">
+                <span class="control__mark"></span>
+                <span class="control__label control__label--additional">Молоко</span>
+              </label>
+            </li>
+            <li class="form__additional-item">
+              <label class="control">
+                <input class="visually-hidden control__input" type="checkbox" name="vitamins">
+                <span class="control__mark"></span>
+                <span class="control__label control__label--additional">Витамины</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="form__submit">
+          <button class="form__button button" type="submit">Отправить заявку</button>
+          <p class="form__note">* — Обязательные поля</p>
+        </div>
+      </form>
     </section>
 
     <section class="adress">
@@ -183,7 +177,7 @@
   <footer class="footer">
     <div class="footer__wrapper wrapper">
       <a class="footer__logo">
-        <img class="footer__logo-image" src="img/footer-logo.svg" width="128" height="24" alt="Логотип Cat Energy">
+        <img class="footer__logo-image" src="img/logo/logo-text.svg" width="128" height="24" alt="Логотип Cat Energy">
       </a>
       <div class="social__wrapper wrapper">
         <ul class="social__list list">
@@ -211,11 +205,29 @@
         </ul>
       </div>
       <div class="academy__logo">
-        <a class="logo" href="https://htmlacademy.ru/"><img src="img/HTML Academy.svg" alt="Логотип HTMLACADEMY."></a>
-        <a class="logo" href="https://htmlacademy.ru/"><img src="img/Лого_html.svg" alt="Иконка HTMLACADEMY."></a>
+        <a class="logo" href="https://htmlacademy.ru/"><img src="img/icon/HTML_Academy.svg"
+            alt="Логотип HTMLACADEMY."></a>
+        <a class="logo" href="https://htmlacademy.ru/"><img src="img/icon/academyicon.svg"
+            alt="Иконка HTMLACADEMY."></a>
       </div>
     </div>
   </footer>
+  <script>
+    var navMain = document.querySelector('.navigation');
+    var navToggle = document.querySelector('.navigation__button');
+
+    navMain.classList.remove('navigation--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('navigation--closed')) {
+        navMain.classList.remove('navigation--closed');
+        navMain.classList.add('navigation--opened');
+      } else {
+        navMain.classList.add('navigation--closed');
+        navMain.classList.remove('navigation--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>

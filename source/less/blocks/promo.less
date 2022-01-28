@@ -20,10 +20,21 @@
     position: absolute;
     width: 100%;
     min-height: 302px;
-    background: url("../../img/index-background.jpg") no-repeat;
-    background-color: #ffffff;
+    background: url("../img/background/background-mobile.png") no-repeat;
+    background-color: #68b738;
     background-position: center;
     z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/background/background-mobile@2x.png") no-repeat;
+      background-color: #68b738;
+      background-position: center;
+      background-size: auto 302px;
+    }
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }
 
