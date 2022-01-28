@@ -1,19 +1,19 @@
 .adress {
+  position: relative;
   background-color: @base-color;
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
-    width: 708px;
+    width: auto;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0 auto;
-    width: 1220px;
+    width: auto;
   }
 }
 
 .adress__cooperation {
-  margin: 26px 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 2px;
@@ -24,15 +24,20 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
+    left: 245px;
     top: 95px;
-    left: 110px;
     width: 565px;
     padding: 58px 80px;
     background-color: #ffffff;
+    z-index: 2;
   }
 }
 
 .adress__title {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
   @media (min-width: @tablet-width) {
     margin: 0 auto;
     width: 160px;

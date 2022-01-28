@@ -34,23 +34,6 @@
     </nav>
   </header>
 
-  <script>
-    var navMain = document.querySelector('.navigation');
-    var navToggle = document.querySelector('.navigation__button');
-
-    navMain.classList.remove('navigation--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('navigation--closed')) {
-        navMain.classList.remove('navigation--closed');
-        navMain.classList.add('navigation--opened');
-      } else {
-        navMain.classList.add('navigation--closed');
-        navMain.classList.remove('navigation--opened');
-      }
-    });
-  </script>
-
   <main class="main">
     <h1 class="visually-hidden">Интернет магазин Кэт Энерджи</h1>
     <section class="promo">
@@ -67,7 +50,7 @@
       <div class="programs__wrapper wrapper">
         <ul class="programs__list list">
           <li class="programs__item programs__item--slim">
-            <h3 class="programs__title title title--upper programs__title--slim">Похудение</h3>
+            <h3 class="programs__title title title--upper">Похудение</h3>
             <p class="programs__text">Ваш кот весит больше собаки и почти утратил способность
               лазить по деревьям? Пора на диету! Cat Energy Slim поможет
               вашему питомцу сбросить лишний вес.</p>
@@ -85,8 +68,8 @@
     </section>
 
     <section class="features">
-      <h2 class="features__title title--big">Как это работает</h2>
       <div class="features__wrapper wrapper">
+        <h2 class="features__title title--big">Как это работает</h2>
         <ol class="features__list list">
           <li class="features__item features__item--leaf">
             <p class="features__text">Функциональное питание
@@ -135,13 +118,23 @@
           </div>
         </div>
 
-        <div class="example__slider">
-          <img class="example__img" src="img/before.png" width="280" height="232" alt="Кот до нашего питания.">
-          <div class="example__togle">
-            <span class="example__range-title title--subtitle">Было</span>
-            <input type="range" name="results" min="0" max="50">
-            <label class="visually-hidden" for="results">результат</label>
-            <span class="example__range-title title--subtitle">Стало</span>
+        <div class="example__slider slider">
+          <div class="slider__images">
+            <div class="slider__image slider__image--before">
+              <img class="slider__img slider__img--before" src="img/before.png" width="280" height="232"
+                alt="Кот до нашего питания.">
+            </div>
+            <div class="slider__image slider__image--after">
+              <img class="slider__img slider__img--after" src="img/after.png" width="280" height="232"
+                alt="Кот после нашего питания.">
+            </div>
+          </div>
+          <div class="slider__toggle">
+            <button class="slider__select title title--subtitle" type="button">Было</button>
+            <div class="slider__range">
+              <div class="slider__bar"></div>
+            </div>
+            <button class="slider__select title title--subtitle" type="button">Стало</button>
           </div>
         </div>
       </div>
@@ -151,7 +144,7 @@
       <h2 class="visually-hidden">Наш адрес</h2>
       <div class="adress__wrapper wrapper">
         <div class="adress__cooperation">
-          <p class="adress__title title--subtitle">Приглашаем <br>
+          <p class="adress__title title">Приглашаем <br>
             к сотрудничеству
             дилеров!</p>
           <p class="adress__text"> ул. Большая
@@ -201,6 +194,22 @@
       </div>
     </div>
   </footer>
+  <script>
+    var navMain = document.querySelector('.navigation');
+    var navToggle = document.querySelector('.navigation__button');
+
+    navMain.classList.remove('navigation--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('navigation--closed')) {
+        navMain.classList.remove('navigation--closed');
+        navMain.classList.add('navigation--opened');
+      } else {
+        navMain.classList.add('navigation--closed');
+        navMain.classList.remove('navigation--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>
