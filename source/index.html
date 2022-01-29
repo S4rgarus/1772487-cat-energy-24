@@ -6,14 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat Energy</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header--green">
     <a class="logo header__logo">
-      <img class="header__img header__img--icon" src="img/logo-icon.svg" width="33" height="38"
-        alt="иконка логотипа Кэт Энерджи.">
-      <img class="header__img header__img--name" src="img/logo_header.svg" width="101" height="18"
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+        <img class="header__img header__img--icon" src="img/logo/logo-mobile.svg" width="33" height="38"
+          alt="иконка логотипа Кэт Энерджи.">
+      </picture>
+      <img class="header__img header__img--name" src="img/logo/logo-text.svg" width="101" height="18"
         alt="логотип Кэт Энерджи.">
     </a>
     <nav class="navigation navigation--opened navigation--nojs">
@@ -40,7 +48,12 @@
       <div class="promo__wrapper wrapper">
         <h2 class="promo__title title">Функциональное питание для котов</h2>
         <span class="promo__text">Занялся собой? Займись котом!</span>
-        <img class="promo__img" src="img/cat-food-mob.png" width="280" height="270" alt="Кот до нашего питания.">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x ">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
+          <img class="promo__img" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" width="280"
+            height="270" alt="Кот до нашего питания.">
+        </picture>
         <button class="promo__button button" type="button">Подобрать программу</button>
       </div>
     </section>
@@ -121,12 +134,18 @@
         <div class="example__slider slider">
           <div class="slider__images">
             <div class="slider__image slider__image--before">
-              <img class="slider__img slider__img--before" src="img/before.png" width="280" height="232"
-                alt="Кот до нашего питания.">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/before-desktop.png 1x, img/before-desktop@2x.png 2x ">
+                <img class="slider__img slider__img--before" src="img/before-mobile.png"
+                  srcset="img/before-mobile@2x.png 2x" width="280" height="232" alt="Кот до нашего питания.">
+              </picture>
             </div>
             <div class="slider__image slider__image--after">
-              <img class="slider__img slider__img--after" src="img/after.png" width="280" height="232"
-                alt="Кот после нашего питания.">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/after-desktop.png 1x, img/after-desktop@2x.png 2x ">
+                <img class="slider__img slider__img--after" src="img/after-mobile.png"
+                  srcset="img/after-mobile@2x.png 2x" width="280" height="232" alt="Кот после нашего питания.">
+              </picture>
             </div>
           </div>
           <div class="slider__toggle">
@@ -161,7 +180,7 @@
   <footer class="footer">
     <div class="footer__wrapper wrapper">
       <a class="footer__logo">
-        <img class="footer__logo-image" src="img/footer-logo.svg" width="128" height="24" alt="Логотип Cat Energy">
+        <img class="footer__logo-image" src="img/logo/logo-text.svg" width="128" height="24" alt="Логотип Cat Energy">
       </a>
       <div class="social__wrapper wrapper">
         <ul class="social__list list">
@@ -189,8 +208,10 @@
         </ul>
       </div>
       <div class="academy__logo">
-        <a class="logo" href="https://htmlacademy.ru/"><img src="img/HTML Academy.svg" alt="Логотип HTMLACADEMY."></a>
-        <a class="logo" href="https://htmlacademy.ru/"><img src="img/Лого_html.svg" alt="Иконка HTMLACADEMY."></a>
+        <a class="logo" href="https://htmlacademy.ru/"><img src="img/icon/HTML_Academy.svg"
+            alt="Логотип HTMLACADEMY."></a>
+        <a class="logo" href="https://htmlacademy.ru/"><img src="img/icon/academyicon.svg"
+            alt="Иконка HTMLACADEMY."></a>
       </div>
     </div>
   </footer>

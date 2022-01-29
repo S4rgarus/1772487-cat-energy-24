@@ -1,7 +1,27 @@
 .header {
   position: relative;
   margin: 0 auto;
-  width: 280px;
+
+  &--green {
+    @media (min-width: @desktop-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        min-height: 694px;
+        background: url("../img/background/background-desktop.jpg") no-repeat;
+        background-color: #68b738;
+
+        @media (min-resolution: 2dppx) {
+          background: url("../img/background/background-desktop@2x.jpg") no-repeat;
+          background-color: #68b738;
+          background-size: 720px auto;
+        }
+      }
+    }
+  }
 
   @media (min-width: @tablet-width) {
     display: flex;
