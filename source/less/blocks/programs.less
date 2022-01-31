@@ -1,193 +1,164 @@
-.programs {
-  margin: 0 0 20px;
-
-
-  @media (min-width: @tablet-width) {
-    margin-top: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 82px;
-  }
-}
-
-.programs__wrapper {
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px;
-
-  @media (min-width: @tablet-width) {
-    padding: 0 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0 110px;
-  }
-}
-
 .programs__list {
-  @media (min-width: @desktop-width) {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media (min-width: @desktop) {
     display: grid;
+    grid-gap: 80px;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    padding-bottom: 70px;
   }
 }
 
 .programs__item {
   position: relative;
-  background-color: @bg-grey-light;
-  padding: 29px 33px 18px 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
+  background-color: @basic_grey;
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 30px;
-    padding: 77px 316px 53px 52px;
-  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 22px;
+    width: 50px;
+    height: 53px;
+    background-image: url("../img/icon/slim.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-  @media (min-width: @desktop-width) {
-    margin: 0;
-    padding: 77px 51px 55px 52px;
-  }
+    @media (min-width: @tablet) {
+      top: 20%;
+      left: auto;
+      right: 76px;
+      width: 200px;
+      height: 211px;
+    }
 
-  &--slim {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 21px;
-      left: 22px;
-      width: 50px;
-      height: 53px;
-      background-image: url("../img/icon/slim.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      @media (min-width: @tablet-width) {
-        top: 81px;
-        right: 62px;
-        left: auto;
-        width: 200px;
-        height: 211px;
-      }
-
-      @media (min-width: @desktop-width) {
-        top: 41px;
-        right: auto;
-        left: 52px;
-        width: 100px;
-        height: 106px;
-      }
+    @media (min-width: @desktop) {
+      top: 41px;
+      left: 52px;
+      width: 100px;
+      height: 106px;
     }
   }
 
-  &--pro {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 24px;
-      left: 13px;
-      width: 67px;
-      height: 50px;
-      background-image: url("../img/icon/pro.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
+  &:last-child::before {
+    background-image: url("../img/icon/pro.svg");
+    width: 67px;
+    height: 50px;
+    top: 24px;
+    left: 13px;
 
-      @media (min-width: @tablet-width) {
-        top: 91px;
-        right: 28px;
-        left: auto;
-        width: 268px;
-        height: 200px;
-      }
+    @media (min-width: @tablet) {
+      top: 25%;
+      left: auto;
+      right: 42px;
+      width: 270px;
+      height: 200px;
+    }
 
-      @media (min-width: @desktop-width) {
-        top: 47px;
-        right: auto;
-        left: 33px;
-        width: 134px;
-        height: 100px;
-      }
+    @media (min-width: @desktop) {
+      top: 47px;
+      left: 33px;
+      width: 134px;
+      height: 100px;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    margin: 0;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 45px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0;
+
+    &:last-child {
+      margin: 0;
     }
   }
 }
 
 .programs__title {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 29px;
-  padding-left: 70px;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  padding-top: 33px;
+  padding-left: 91px;
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 24px;
-    padding-left: 0;
+  @media (min-width: @tablet) {
+    padding-top: 75px;
+    padding-left: 53px;
     font-size: 36px;
     line-height: 36px;
   }
 
-  @media (min-width: @desktop-width) {
-    margin-bottom: 73px;
-    padding-left: 162px;
+  @media (min-width: @desktop) {
+    padding-top: 77px;
+    padding-left: 214px;
   }
 }
 
 .programs__text {
-  margin: 0;
-  padding: 22px 0;
-  border-bottom: 1px solid #d9d9d9;
+  padding-top: 29px;
+  padding-right: 33px;
+  padding-left: 20px;
 
-  @media (min-width: @tablet-width) {
-    padding: 24px 0 33px;
-    border: none;
+  @media (min-width: @tablet) {
+    padding-top: 24px;
+    padding-left: 52px;
+    padding-right: 327px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
-  @media (min-width: @desktop-width) {
-    padding: 40px 0 7px;
+  @media (min-width: @desktop) {
+    padding-top: 73px;
+    padding-left: 52px;
+    padding-right: 51px;
   }
 }
 
 .programs__link {
-  position: relative;
-  display: inline-block;
-  padding: 4px 49px 4px 0;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    width: 24px;
-    height: 12px;
-    background-image: url("../img/icon/icon-arrow.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @media (min-width: @tablet-width) {
-      left: 131px;
-    }
-  }
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-top: 43px;
+  margin-left: 20px;
+  padding-bottom: 18px;
+  text-decoration: none;
+  background-image: url("../img/icon/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 101px 1px;
 
   &:hover {
-    &::after {
-      width: 32px;
-      background-image: url("../img/icon/icon-arrow-large.svg");
-    }
+    background-image: url("../img/icon/icon-arrow.svg");
   }
 
   &:active {
+    background-image: url("../img/icon/icon-arrow-large.svg");
     opacity: 0.3;
-
-    &::after {
-      width: 32px;
-      background-image: url("../img/icon/icon-arrow-large.svg");
-    }
   }
 
-  @media (min-width: @tablet-width) {
-    padding-right: 57px;
+  @media (min-width: @tablet) {
+    margin-top: 52px;
+    margin-left: 52px;
+    padding-bottom: 53px;
     font-size: 20px;
     line-height: 30px;
+    background-position: 133px 8px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 23px;
+    padding-bottom: 55px;
   }
 }

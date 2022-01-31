@@ -1,0 +1,121 @@
+.about-product__title {
+  font-size: 36px;
+  line-height: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: @tablet) {
+    padding-bottom: 55px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.about-product__list {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 49px;
+  list-style: none;
+  display: grid;
+  grid-row-gap: 20px;
+  grid-template-rows: repeat(4, 60px);
+
+  @media (min-width: @tablet) {
+    grid-template-rows: repeat(2, 280px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 37px;
+    column-gap: 45px;
+  }
+
+  @media (min-width: @desktop) {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 83px;
+  }
+}
+
+.about-product__item {
+  padding-left: 80px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/icon/leaf.svg");
+    background-color: @basic_green;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+  }
+
+  &:nth-child(2)::before {
+    background-image: url("../img/icon/tube.svg");
+  }
+
+  &:nth-child(3)::before {
+    background-image: url("../img/icon/food.svg");
+  }
+
+  &:nth-child(4)::before {
+    background-image: url("../img/icon/scales.svg");
+  }
+
+
+  @media (min-width: @tablet) {
+    padding-left: 0;
+    position: relative;
+
+    &::before {
+      top: 23px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.about-product__text {
+  @media (min-width: @tablet) {
+    padding-top: 135px;
+    width: 248px;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::after {
+      content: "1";
+      position: absolute;
+      top: -12px;
+      left: 116px;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 280px;
+      line-height: 280px;
+      text-align: center;
+      color: @basic_grey;
+      z-index: -1;
+    }
+
+    .about-product__item:nth-child(2) &::after {
+      content: "2";
+    }
+
+    .about-product__item:nth-child(3) &::after {
+      content: "3";
+    }
+
+    .about-product__item:nth-child(4) &::after {
+      content: "4";
+    }
+  }
+
+  & br {
+    display: none;
+
+    @media (min-width: @tablet) {
+      display: block;
+    }
+  }
+}
