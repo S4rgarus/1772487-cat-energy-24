@@ -1,77 +1,44 @@
-.header {
-  position: relative;
-  margin: 0 auto;
-
-  &--green {
-    @media (min-width: @desktop-width) {
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 50%;
-        min-height: 694px;
-        background: url("../img/background/background-desktop.jpg") no-repeat;
-        background-color: #68b738;
-
-        @media (min-resolution: 2dppx) {
-          background: url("../img/background/background-desktop@2x.jpg") no-repeat;
-          background-color: #68b738;
-          background-size: 720px auto;
-        }
-      }
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    width: 780px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 53px 0 0;
-    width: 1220px;
-  }
-}
-
-
-.header__logo {
+.header__wrapper {
+  min-height: 66px;
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  padding: 0 20px;
-  height: 66px;
-  width: 280px;
+  align-items: center;
 
-  @media (min-width: @tablet-width) {
-    width: 190px;
+  @media (max-width: @mobile-only) {
+    flex-wrap: wrap;
+    padding: 0;
   }
 
-  @media (min-width: @desktop-width) {
-    width: 610px;
+  @media (min-width: @tablet) {
+    align-items: start;
   }
 }
 
-.header__img {
-  display: block;
-  margin-right: auto;
-  justify-content: center;
+.header__link-logo {
+  @media (max-width: @mobile-only) {
+    padding-top: 7px;
+    padding-left: 20px;
+  }
+}
 
+.header__image-logo {
+  &:hover {
+    opacity: 0.8;
+  }
 
-  @media (min-width: @tablet-width) {
-    &--icon {
-      margin-right: 12px;
-      width: 60px;
-      height: 49px;
-    }
+  &:active {
+    opacity: 0.6;
+  }
 
-    @media (min-width: @desktop-width) {
-      &--icon {
-        margin-right: 14px;
-        width: 65px;
-        height: 59px;
-      }
-    }
+  @media (min-width: @tablet) {
+    margin-top: 24px;
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 53px;
+    width: 202px;
+    height: 59px;
   }
 }
