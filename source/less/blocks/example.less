@@ -17,8 +17,9 @@
   display: grid;
 
   @media (min-width: @desktop) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 70px;
   }
 }
 
@@ -34,14 +35,16 @@
   padding-top: 25px;
 
   @media (min-width: @tablet) {
-    padding-top: 23px;
+    padding-top: 40px;
     font-size: 60px;
     line-height: 60px;
   }
 }
 
 .example__text {
-  padding-top: 40px;
+  padding-top: 45px;
+  font-size: 14px;
+  line-height: 18px;
 
   @media (min-width: @tablet) {
     padding-top: 63px;
@@ -91,9 +94,16 @@
       margin-right: 42px;
     }
   }
+
+  @media (min-width: @desktop) {
+    &:first-child {
+      margin-right: 42px;
+    }
+  }
 }
 
 .example__term {
+  font-family: "Arial", sans-serif;
   background-color: #eaeaea;
   font-size: 12px;
   line-height: 12px;
@@ -106,7 +116,7 @@
 
   @media (min-width: @tablet) {
     background-color: @white;
-    width: 100px;
+    width: auto;
     padding: 0 10px;
     font-size: 14px;
     line-height: 14px;
@@ -137,7 +147,7 @@
     padding: 15px 56px 25px;
 
     .example__box:nth-child(2) & {
-      padding: 15px 29px 25px;
+      padding: 15px 29px 21px;
     }
   }
 }
@@ -155,24 +165,32 @@
     font-size: 20px;
     text-align: right;
     margin: 0;
+    margin-top: 10px;
     padding: 0;
     padding-left: 90px;
+
+    & span {
+      margin-top: 10px;
+      display: inline-block;
+    }
   }
 
   @media (min-width: @desktop) {
+    margin: 0;
     padding: 0;
     padding-top: 55px;
 
     & span {
+      margin: 0;
       margin-left: 63px;
     }
   }
 }
 
 .example__slider {
-  padding: 43px 0;
+  padding: 40px 0 45px;
 
   @media (min-width: @tablet) {
-    padding: 0 57px 56px 59px;
+    padding: 0;
   }
 }

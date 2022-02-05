@@ -8,16 +8,17 @@
     top: 0;
     right: 0;
     left: 0;
-    background-image: url("../img/background/background-mobile.png");
+    background-image: url("../img/background-mobile.png");
     background-repeat: no-repeat;
+    background-color: @basic_green;
     background-size: cover;
     background-position: center;
-    min-height: 302px;
+    min-height: 367px;
     min-width: 320px;
     z-index: -1;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/background/background-mobile@2x.png");
+      background-image: url("../img/background-mobile@2x.png");
     }
 
     @media (min-width: @tablet) {
@@ -29,10 +30,10 @@
       top: -120px;
       left: 50%;
       bottom: 0;
-      background-image: url("../img/background/background-desktop.jpg");
+      background-image: url("../img/background-desktop.jpg");
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/background/background-desktop@2x.jpg");
+        background-image: url("../img/background-desktop@2x.jpg");
       }
     }
   }
@@ -41,9 +42,11 @@
 .promo__wrapper {
   color: @white;
   display: grid;
+  padding-top: 66px;
 
   @media (min-width: @tablet) {
     justify-items: flex-start;
+    padding-top: 0;
   }
 
   @media (min-width: @desktop) {
@@ -72,7 +75,8 @@
   }
 
   @media (min-width: @desktop) {
-    margin-top: 111px;
+    margin-top: 105px;
+    margin-left: 80px;
     grid-row: 1 / 2;
   }
 }
@@ -97,25 +101,32 @@
 
   @media (min-width: @desktop) {
     grid-row: 2 / 3;
+    margin-top: 20px;
+    margin-left: 80px;
   }
 }
 
 .promo__container-image {
   margin: 0;
+  margin-top: 29px;
   justify-self: center;
 
   @media (min-width: @tablet) {
+    margin-top: -5px;
+    justify-self: start;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 25px;
     justify-self: start;
   }
 }
 
 .promo__image {
-  margin-top: 28px;
-
   @media (min-width: @tablet) {
     width: 709px;
     height: 609px;
-    margin-top: -77px;
+    margin-top: -80px;
   }
 
   @media (min-width: @desktop) {
@@ -130,8 +141,7 @@
   font-size: 14px;
   line-height: 18px;
   text-align: center;
-  align-items: center;
-  padding: 10px 41px;
+  padding: 10px 44px;
   text-decoration: none;
 
   @media (min-width: @tablet) {
@@ -139,7 +149,7 @@
     line-height: 20px;
     margin-top: 49px;
     margin-left: 87px;
-    padding: 14px 26px;
+    padding: 17px 26px;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
   }
